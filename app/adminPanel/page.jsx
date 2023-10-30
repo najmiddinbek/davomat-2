@@ -19,7 +19,8 @@ const getTopics = async () => {
 };
 
 export default async function TopicsList() {
-    const { topics } = await getTopics();
+    const a = await getTopics()
+    const topics = a?.topics
     const maktablar = Array.from({ length: 54, }, (_, index) => index + 1);
     return (
         <>
